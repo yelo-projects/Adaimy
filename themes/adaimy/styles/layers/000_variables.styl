@@ -1,0 +1,99 @@
+///////////////////////////////////////////////////////////
+//// UNITS ///////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+// Main Website Size
+// columnMax actually determines the smallest
+// possible size.
+$columnMax = 320px;
+$columnMin = 80px;
+$columnsNmb = 12;
+
+// the following allows 1em = 10px
+$body_scale = 62.5%
+$font_size = 12px;
+$font_lineHeight = 1.5;
+$headerMultiplier = .2;
+$sup_offset = 5px;
+$sub_offset = 2px;
+$unit = $font_size * $font_lineHeight;
+$unitThird = $unit / 3;
+$unitTwoThird = $unitThird * 2;
+$unitHalf = $unit / 2;
+$unitFourth = $unit / 4;
+$paragraph_margin_top = 0;
+$paragraph_margin_bottom = 0;
+// ul, ols
+$listContainerMarginX = $unitThird;
+$listContainerMarginTop = $unitThird;
+$listContainerMarginBottom = $unitTwoThird;
+
+// list items
+$listItemMarginX = $unitThird;
+///////////////////////////////////////////////////////////
+//// FONTS ///////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+// these are some fonts stacks that you can use
+// you should edit them or not use them at all
+// they contain too many fonts of different sizes and
+// are not suitable for production
+$fontStack_sans = "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, Verdana, sans-serif;
+$fontStack_serif = Cambria, Georgia, "Big Caslon", "Book Antiqua", "Palatino Linotype", TimesNewRoman, "Times New Roman", Times, Baskerville, serif;
+$fontStack_mono = Consolas, Monaco, "Lucida Console", monospace;
+//define the fonts here
+$font_normal = $fontStack_sans;
+$font_titles = $fontStack_sans;
+$font_quotes = $fontStack_sans;
+$font_small = $fontStack_sans;
+$font_monospace = $fontStack_mono;
+$font_buttons = $fontStack_sans;
+
+
+///////////////////////////////////////////////////////////
+//// STYLES //////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+//margins
+$title_margin = 0;
+$quote_margin = 2em;
+$horizontalLine_margin = .5em;
+
+//Weights
+$font_normal_weight = normal;
+$font_emphasized_weight = bold;
+$font_titles_weight = bold;
+
+//accessibility
+$focusStyle = thin dotted $color_focus;
+$insertsStyle = underline;
+$deleteStyle = line-through;
+
+//links
+$linksStyle = none;
+$linksHoverStyle = underline;
+$linksActiveStyle = underline;
+
+
+
+// accessibility
+$focusStyle = thin dotted $color_focus;
+$insertsStyle = underline;
+$deleteStyle = line-through;
+
+
+
+///////////////////////////////////////////////////////////
+//// COLORS //////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+$color_focus = red;
+$color_text = #333;
+$color_links = $color_text;
+$color_links_visited = $color_text;
+$color_links_hover = #990000;
+$color_links_active = $color_text;
+$color_selected_fg = #fff;
+$color_selected_bg = #fe57a1;
+$color_input_valid = #ddf0dd;
+$color_input_invalid = #f0dddd;

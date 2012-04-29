@@ -1,0 +1,19 @@
+.cms-logo a {
+    background: url("../images/logo_small.png") no-repeat scroll 0 0 transparent;
+    border-right: 1px solid #19435C;
+    display: inline-block;
+    float: left;
+    height: 24px;
+    margin-right: 8px;
+    padding-right: 7px;
+    text-indent: -9999em;
+    width: 24px;
+}
+
+.ss-loading-screen .loading-logo {
+	background: url("../images/logo.gif") no-repeat scroll 50% 50% transparent;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+}

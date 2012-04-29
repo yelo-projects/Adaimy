@@ -1,0 +1,12 @@
+.git/
+.svn/
+.hg/
+silverstripe-cache
+_resampled
+.sass-cache
+#_ss_environment.php
+nbproject
+*~
+*.swp
+log
+_temp*

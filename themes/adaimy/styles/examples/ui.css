@@ -1,0 +1,218 @@
+[data-tip] {
+  position: relative;
+}
+[data-tip]:before,
+[data-tip]:after {
+  opacity: 0;
+  -moz-transition: opacity 0.2s ease-out;
+  -moz-transition-delay: 0s;
+  -webkit-transition: opacity 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  -o-transition: opacity 0.2s ease-out;
+  -o-transition-delay: 0s;
+  -ms-transition: opacity 0.2s ease-out;
+  -ms-transition-delay: 0s;
+  transition: opacity 0.2s ease-out;
+  transition-delay: 0s;
+}
+[data-tip]:before {
+  content: attr(data-tip);
+  font-size: 12px;
+  position: absolute;
+  z-index: 999;
+  white-space: nowrap;
+  top: 100%;
+  left: 50%;
+  background: #0e0e0e;
+  color: #fdfdfd;
+  padding: 0px 7px;
+  line-height: 24px;
+  height: 24px;
+}
+[data-tip]:after {
+  content: "";
+  display: block;
+  z-index: 999;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #0e0e0e;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: 6px;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+  opacity: 1;
+  -moz-transition: opacity 0.4s ease-out;
+  -moz-transition-delay: 0.5s;
+  -webkit-transition: opacity 0.4s ease-out;
+  -webkit-transition-delay: 0.5s;
+  -o-transition: opacity 0.4s ease-out;
+  -o-transition-delay: 0.5s;
+  -ms-transition: opacity 0.4s ease-out;
+  -ms-transition-delay: 0.5s;
+  transition: opacity 0.4s ease-out;
+  transition-delay: 0.5s;
+}
+[data-tip]:hover:before {
+  top: 100%;
+}
+[data-tip]:hover:after {
+  bottom: 0;
+}
+[data-tip] {
+  position: relative;
+}
+[data-tip]:before,
+[data-tip]:after {
+  opacity: 0;
+  -moz-transition: opacity 0.2s ease-out;
+  -moz-transition-delay: 0s;
+  -webkit-transition: opacity 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  -o-transition: opacity 0.2s ease-out;
+  -o-transition-delay: 0s;
+  -ms-transition: opacity 0.2s ease-out;
+  -ms-transition-delay: 0s;
+  transition: opacity 0.2s ease-out;
+  transition-delay: 0s;
+}
+[data-tip]:before {
+  content: attr(data-tip);
+  font-size: 12px;
+  position: absolute;
+  z-index: 999;
+  white-space: nowrap;
+  top: 100%;
+  left: 50%;
+  background: #0e0e0e;
+  color: #fdfdfd;
+  padding: 0px 7px;
+  line-height: 24px;
+  height: 24px;
+}
+[data-tip]:after {
+  content: "";
+  display: block;
+  z-index: 999;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #0e0e0e;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: 6px;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+  opacity: 1;
+  -moz-transition: opacity 0.4s ease-out;
+  -moz-transition-delay: 0.5s;
+  -webkit-transition: opacity 0.4s ease-out;
+  -webkit-transition-delay: 0.5s;
+  -o-transition: opacity 0.4s ease-out;
+  -o-transition-delay: 0.5s;
+  -ms-transition: opacity 0.4s ease-out;
+  -ms-transition-delay: 0.5s;
+  transition: opacity 0.4s ease-out;
+  transition-delay: 0.5s;
+}
+[data-tip]:hover:before {
+  top: 100%;
+}
+[data-tip]:hover:after {
+  bottom: 0;
+}
+a.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background: #eee;
+/* Old browsers */
+  background: #eee -moz-linear-gradient(top, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+/* FF3.6+ */
+  background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.20)), color-stop(100%, rgba(0,0,0,0.20)));
+/* Chrome,Safari4+ */
+  background: #eee -webkit-linear-gradient(top, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+/* Chrome10+,Safari5.1+ */
+  background: #eee -o-linear-gradient(top, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+/* Opera11.10+ */
+  background: #eee -ms-linear-gradient(top, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+/* IE10+ */
+  background: #eee linear-gradient(top, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+/* W3C */
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 4px 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #444;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  color: #222;
+  background: #ddd;
+/* Old browsers */
+  background: #ddd -moz-linear-gradient(top, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+/* FF3.6+ */
+  background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.30)), color-stop(100%, rgba(0,0,0,0.30)));
+/* Chrome,Safari4+ */
+  background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+/* Chrome10+,Safari5.1+ */
+  background: #ddd -o-linear-gradient(top, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+/* Opera11.10+ */
+  background: #ddd -ms-linear-gradient(top, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+/* IE10+ */
+  background: #ddd linear-gradient(top, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+/* W3C */
+  border: 1px solid #888;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+a.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+  border: 1px solid #666;
+  background: #ccc;
+/* Old browsers */
+  background: #ccc -moz-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.40) 100%);
+/* FF3.6+ */
+  background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.35)), color-stop(100%, rgba(10,10,10,0.40)));
+/* Chrome,Safari4+ */
+  background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.40) 100%);
+/* Chrome10+,Safari5.1+ */
+  background: #ccc -o-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.40) 100%);
+/* Opera11.10+ */
+  background: #ccc -ms-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.40) 100%);
+/* IE10+ */
+  background: #ccc linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.40) 100%);
+/* W3C */
+}
+.button.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+}

@@ -1,0 +1,135 @@
+makeHeaders($font_size,$headerMultiplier,$font_lineHeight);
+
+///////////////////////////////////////////////////////////
+//// BASE OBJECTS ////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+// Base objects are meant to be extended
+
+// this will be applied to body, so no need
+// to extend it with the other text classes
+.text{
+	color:$color_text;
+	font-family: $font_normal;
+	font-size:$body_scale;
+	font-size:$font_size;
+	line-height:$font_lineHeight;
+}
+
+.text_small{
+	font-family: $font_small;
+	font-weight:lighter;
+}
+
+
+.text_large{
+	font-family: $font_titles;
+	font-weight: $font_titles_weight;
+	margin:0 auto;
+}
+
+.paragraph{
+	padding-bottom:$paragraph_margin_bottom;
+	padding-top:$paragraph_margin_top;
+}
+
+.browserFocus{outline: $focusStyle;}
+
+.link{
+	color:$color_links;
+	text-decoration: $linksStyle;
+	&:focus, &.focus{
+		@extend .browserFocus;
+	}
+	&:hover, &.hover{
+		color:$colors_links_hover;
+		outline: 0;
+		text-decoration: $linksHoverStyle;
+	}
+	&:active, &.active, &.current{
+		color:$color_links_active;
+		outline: 0;
+		text-decoration: $linksActiveStyle;
+	}
+	&:visited{
+		color:$color_links_visited;
+		text-decoration: $linksStyle;
+	}
+
+}
+
+.listContainer{
+	margin-left:$listContainerMarginX;
+	margin-top:$listContainerMarginTop;
+	margin-bottom:$listContainerMarginBottom;
+}
+
+.listItem{
+	margin:$listItemMarginX $listItemMarginY;
+}
+
+.text_small_2{
+	@extend .text_small;
+	font-size:85%;
+}
+
+.text_small_1{
+	@extend .text_small;
+	font-size:75%;
+}
+
+.text_large_1{
+	@extend .text_large;
+	@extend .header1;
+}
+.text_large_2{
+	@extend .text_large;
+	@extend .header2;
+}
+.text_large_3{
+	@extend .text_large;
+	@extend .header3
+}
+.text_large_4{
+	@extend .text_large;
+	@extend .header4
+}
+.text_large_5{
+	@extend .text_large;
+	@extend .header5
+}
+.text_large_6{
+	@extend .text_large;
+	@extend .header6
+}
+///////////////////////////////////////////////////////////
+//// ACCESSIBILITY STUFF /////////////////////////////////
+/////////////////////////////////////////////////////////
+
+blockquote, q {
+	quotes: none;
+	&:before{
+		content:'\2018'
+	}
+	&:after{
+		content: '\201d';
+	}
+}
+ins {
+	text-decoration: $insertStyle;
+}
+del {
+	text-decoration: $deleteStyle;
+}
+::selection, ::-moz-selection {
+	background:$color_selected_bg;
+	color:$color_selected_fg;
+	text-shadow: none;
+}
+input:valid, textarea:valid, input.valid, textarea.valid{
+	background-color:$color_input_valid;
+}
+input:invalid, textarea:invalid, input.invalid, textarea.invalid{
+	background-color: $color_input_invalid; 
+}
+ button, input, select, textarea { font-family: $font_buttons;}

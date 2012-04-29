@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo rm -r silverstripe-cache
+mkdir silverstripe-cache
+chmod -R 777 silverstripe-cache

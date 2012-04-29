@@ -1,0 +1,3 @@
+#!/bin/bash
+
+stylus -w typography.styl index.styl -o ./css

@@ -1,0 +1,61 @@
+#########################################################
+Simplify CMS Admin ("simplify") Module
+#########################################################
+
+About
+-----------------------------------------------
+
+Simplify allows you to customise the Silverstripe admin interface without any coding, 
+simply by setting security permissions.
+
+Features:
+
+- Simplify the Silverstripe admin, provides an easy way of turning features on and off
+- Make your CMS Admin easier to use for non-technical end-users
+- Permission based, so you can enable options for some users but not others.
+- Hide any Page, Tab or Field in the CMS
+- Customise the buttons on the TinyMCE HTML editor
+- Over 24 new permissions to fully configure how the admin looks
+- Easily add in your own custom Simplify permissions  
+- Supports i18n of permission descriptions
+
+
+IMPORTANT CAVEATS:
+	1.	Simplify currently hides most elements using CSS and JS. 
+		A determined end user could still read or execute these hidden elements. 
+		It is a future goal of the Simplify module to remove these elements from the backend.
+
+
+Maintainer Contact
+-----------------------------------------------
+Daniel Pickering (Nickname: froog)
+<daniel (at) momentumstudios (dot) co (dot) nz>
+I'm often on the IRC #silverstripe channel as froog - feel free to chat! 
+
+
+Requirements
+-----------------------------------------------
+SilverStripe 2.3.1+
+(May work on older versions, has not been tested on any previous to this)
+
+
+Installation Instructions
+-----------------------------------------------
+Extract the simplify folder into the top level of your site, and visit
+http://www.mysite.com/dev/build?flush=1 to rebuild the database.
+
+Quick start
+-----------------------------------------------
+1. After installing Simplify, login to the admin interface as a full admin user
+2. Click on the Security menu
+3. Click on the Group you want to Simplify, or create a new one.
+4. Click on the Simplify tab
+4. Browse the available tabs and options, and select some you find interesting
+5. Save the group and logout
+6. Login as one of your users and see the difference!
+
+
+Documentation
+-----------------------------------------------
+Coming soon...
+

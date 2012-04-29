@@ -1,0 +1,59 @@
+@import "./css3";
+
+gridBackground($unit)
+	$unit = $unit * 1px;
+	$size = $unit * 20;
+	background-color:#269;
+	background-image: -webkit-linear-gradient(white 2px, transparent 2px), -webkit-linear-gradient(0, white 2px, transparent 2px), -webkit-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), -webkit-linear-gradient(0, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-image: -moz-linear-gradient(white 2px, transparent 2px), -moz-linear-gradient(0, white 2px, transparent 2px), -moz-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), -moz-linear-gradient(0, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-image: -o-linear-gradient(white 2px, transparent 2px), -o-linear-gradient(0, white 2px, transparent 2px), -o-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), -o-linear-gradient(0, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-image: -ms-linear-gradient(white 2px, transparent 2px), -ms-linear-gradient(0, white 2px, transparent 2px), -ms-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), -ms-linear-gradient(0, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size:$size $size, $size $size, $unit $unit, $unit $unit;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
+
+getGridSize($unit=12,$lineHeight=1.5,$columns=12,$max=960px)
+	$base = $unit * $lineHeight;
+	
+
+headerRythm($unit=12,$multiplier = 1, $lineHeight = 1.5, $ratio = 2 3)
+	// font size is simply the base font * how much bigger
+	$fontsize = ceil($unit * $multiplier);
+	// block is the size of one normal line of text
+	// so font * line height
+	$block = $unit * $lineHeight;
+	// the size of this is a normal line * multiplier
+	// we ceil() multiplier to not get decimals
+	$size = $block * ceil($multiplier);
+	// what's left is the size of a whole line minus
+	// the size already occupied by the font.
+	$left = $size - $fontsize;
+	if $ratio
+		$divider = $ratio[1];
+		$greater = $ratio[0];
+		$lower = $ratio[1] - $ratio[0];
+		$adjust = ($left / $divider) * 1px;
+		$ratioUp = ceil($greater * $adjust);
+		$ratioDown = floor($lower * $adjust);
+	else
+		$adjust = $left * 1px;
+		$ratioUp = 0;
+		$ratioDown = $adjust;
+	font-size:$fontsize;
+	padding-top: $ratioUp;
+	padding-bottom: $ratioDown;
+	line-height:1;
+
+makeHeaders($unit=12,$inc=.2, $lineHeight=1.5)
+	$base = 1;
+	.header6
+		headerRythm($unit,$base + $inc * 1, $lineHeight);
+	.header5
+		headerRythm($unit,$base + $inc * 2, $lineHeight);
+	.header4
+		headerRythm($unit,$base + $inc * 3, $lineHeight);
+	.header3
+		headerRythm($unit,$base + $inc * 4, $lineHeight);
+	.header2
+		headerRythm($unit,$base + $inc * 5, $lineHeight);
+	.header1
+		headerRythm($unit,$base + $inc * 6, $lineHeight);

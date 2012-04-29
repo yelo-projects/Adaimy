@@ -1,0 +1,59 @@
+.typography{
+	@extend .text;	
+	small {
+		@extend .text_small_1;
+	}
+	sub, sup {
+		@extend .text_small_2;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sup {
+		top: $sup_offset;
+	}
+	sub {
+		bottom: $sub_offset;
+	}
+	a{
+		@extend .link;
+	}
+	p {
+		@extend .paragraph;
+		&.MsoNormal, &.MsoBodyText {margin: 0;}
+	}
+	ul,ol {
+		@extend .listContainer;
+		li{
+			@extend .listItem;
+		}
+	}
+	.left {text-align:left;}
+	.center {text-align:center;}
+	.right {text-align:right;}
+	img{
+		&.right {float:right;}
+		&.left {float:left;}
+	}
+	h1,h2,h3,h4,h5,h6{
+		@extend .text_large;
+	}
+	h1{
+		@extend .text_large_1;
+	}
+	h2{
+		@extend .text_large_2;
+	}
+	h3{
+		@extend .text_large_3;
+	}
+	h4{
+		@extend .text_large_4;
+	}
+	h5{
+		@extend .text_large_5;
+	}
+	h6{
+		@extend .text_large_6;
+	}
+}

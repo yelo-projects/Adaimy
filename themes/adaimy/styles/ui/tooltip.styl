@@ -1,0 +1,90 @@
+$background ?= #0e0e0e;
+$foreground ?= #fdfdfd;
+$fontSize ?= 12px;
+$height ?= 24px;
+$pointer ?= 6px;
+$padding ?= 7px;
+$pointerDirection ?= bottom
+$pointerShift ?= $pointer
+$fadeOut = 0.2s ease-out
+$fadeIn = 0.4s ease-out
+$delayOut = 0s
+$delayIn = 0.5s
+
+if $pointerDirection == bottom
+	$pointerOppositeDirection = right left
+else if $pointerDirection == top
+	$pointerOppositeDirection = right left
+else if $pointerDirection == left
+	$pointerOppositeDirection = top
+else
+	$pointerOppositeDirection = top
+
+hasToolTip(){
+	position:relative;
+	&:before, &:after{
+		opacity:0;
+		for vendor in vendors{
+			if vendor == official{
+				transition: opacity $fadeOut;
+				transition-delay: $delayOut;
+			}else{
+				-{vendor}-transition:opacity $fadeOut;
+				-{vendor}-transition-delay: $delayOut;
+			}
+		}
+	}
+	&:before {
+		content: attr(data-tip);   
+		font-size: $fontSize;
+		position:absolute;
+		z-index: 999;
+		white-space:nowrap;
+		top:100%;
+		left: 50%;
+		background:$background;
+		color:$foreground;
+		padding:0px $padding;
+		line-height: $height;
+		height: $height;
+	}
+	&:after {
+		content: "";
+		display: block;
+		z-index:999;
+		if $pointerOppositeDirection{
+			for $o in $pointerOppositeDirection{
+				border-{$o}: $pointer solid transparent;
+			}
+		}
+		border-{$pointerDirection}:$pointer solid $background;
+		position: absolute;
+		bottom:0;
+		left: 50%;
+		margin-left: $pointerShift;
+	}
+	&:hover{
+		&:before, &:after{
+			opacity:1;
+			for vendor in vendors{
+				if vendor == official{
+					transition: opacity $fadeIn;
+					transition-delay: $delayIn;
+				}else{
+					-{vendor}-transition:opacity $fadeIn;
+					-{vendor}-transition-delay: $delayIn;
+				}
+			}
+		}
+		&:before{
+			top:100%;	
+		}
+		&:after{
+			bottom:0;
+		}
+	}
+}
+
+[data-tip]{
+	hasToolTip();
+}

@@ -1,0 +1,6 @@
+ie6-fixed(left=0, top=0)
+  * html &
+    position absolute
+    left unquote("expression((" + left + "+(ignoreMe2=document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft))+'px')")
+    top unquote("expression((" + top + "+(ignoreMe=document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop))+'px')")
+

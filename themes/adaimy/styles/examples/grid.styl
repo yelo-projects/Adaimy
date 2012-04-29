@@ -1,0 +1,39 @@
+@import "../mixins/grid";
+
+$defaultFontSize = 14px;
+$defaultLineHeight = 1.5;
+$headerMultiplier = .2;
+$unit = $defaultFontSize * $defaultLineHeight;
+
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,blockquote,q,pre,code{
+	margin:0;
+	padding:0;
+	font-size:$defaultFontSize;
+	line-height:$defaultLineHeight;
+	color:white;
+}
+
+body{
+	gridBackground($unit);
+}
+
+makeHeaders($defaultFontSize,$headerMultiplier,$defaultLineHeight);
+
+h1
+	@extend .header1
+h2
+	@extend .header2
+h3
+	@extend .header3
+h4
+	@extend .header4
+h5
+	@extend .header5
+h6
+	@extend .header6
+
+.style{
+	text-transform:uppercase lowercase none capitalize;
+	font-style:italic oblique
+	font-weight:bold lighter bolder normal
+}

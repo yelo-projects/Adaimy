@@ -1,0 +1,84 @@
+support-for-ie ?= true;
+
+vendor(prop,args,custVendors = vendors)
+	for vendor in custVendors
+		if vendor == official
+			{prop}: args
+		else
+			-{vendor}-{prop}: args
+
+border-radius()
+	vendor('border-radius',arguments);
+
+box-shadow()
+	vendor('box-shadow', arguments);
+
+opacity(n)
+	vendor('opacity',n);
+	if support-for-ie
+		-ms-filter	unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
+		filter 		unquote('alpha(opacity=' + round(n * 100) + ')')
+
+box-sizing()
+	vendor('box-sizing',arguments);
+
+transform()
+	vendor('transform',arguments);
+
+transition()
+	vendor('transition',arguments);
+
+transition-property()
+	vendor('transition-property',arguments);
+
+transition-delay()
+	vendor('transition-delay',arguments);
+
+transition-duration()
+	vendor('transition-duration',arguments);
+
+
+background-size(type)
+	vendor('background-size',arguments);
+
+background-size-ie(src)
+		//-ms-filter	unquote('"progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''+src+'\', sizingMethod=\'scale\')"')
+		filter 		unquote("progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='scale')")
+
+				
+//css3Background(prop,args,custVendors = vendors)
+//	for vendor in custVendors
+//		if vendor == official
+//			background:{prop} args
+//		else
+//			background:-{vendor}-{prop} args
+//
+//buildGradientString(vendor,args)
+//	str = ''
+//	if vendor == official
+//		pref = 'linear-gradient';
+//	else if vendor == webkit
+//		pref = '-webkit-gradient'
+//	else
+//		pref = '-%s-linear-gradient' % vendor;
+//	for arg,i in args
+//		str+=',' if i
+//		str+= pref+arg
+//	unquote(str);
+//
+//linear-gradient()
+//	str = ''
+//	for v,i in arguments
+//		str+=' ' if i;
+//		str+=v;
+//	'linear-gradient(' + str + ')'
+//
+//background-gradient()
+//	for vendor in vendors
+//		background-image:buildGradientString(vendor,arguments);
+//
+//gradient-ie($start,$end){
+//	filter: 	unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr='+$start+', endColorstr='+$end+')');
+//	-ms-filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='"+$start+"', endColorstr='"+$end+"')");
+//}
+
