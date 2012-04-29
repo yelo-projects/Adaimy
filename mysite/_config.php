@@ -7,7 +7,7 @@ global $project;
 $_project_dir = rtrim(str_replace('\\','/',dirname(__FILE__)),'/').'/';
 $project = 'mysite';
 $project_name = 'Adaimy Studios';
-$theme_name = 'adaimy';
+$theme_name = 'default';
 $_project_log = dirname($_project_dir).'/log/'.$project.'-'.date('H-i-s').'.log';
 $_project_url = 'http://'.(SERVER_PROD ? $project.'.com' : 'localhost');
 
